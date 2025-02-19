@@ -6,7 +6,7 @@ export async function getAISuggestions(
   apiKey: string
 ): Promise<AIResponse> {
   try {
-    const effectiveApiKey = import.meta.env.VITE_OPENAI_API_KEY || apiKey;
+    const effectiveApiKey = import.meta.env.VITE_API_KEY || apiKey;
     
     if (!effectiveApiKey || effectiveApiKey.trim() === '') {
       return {
